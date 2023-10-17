@@ -12,7 +12,15 @@ for i in range(3):
 print()
 
 print('\033[37mУзор:')
-print('◯' * 50)
+print('    ■ ■ ■     ' * 5)
+print(' ■ ■     ■ ■  ' * 5)
+print(' ■         ■  ' * 5)
+print('■           ■ ' * 5)
+print('■           ■ ' * 5)
+print('■           ■ ' * 5)
+print(' ■         ■  ' * 5)
+print(' ■ ■     ■ ■  ' * 5)
+print('    ■ ■ ■     ' * 5)
 print()
 
 print('График функции y=x/3:')
@@ -21,7 +29,7 @@ for y in range(10, 0, -1):
     x = y * 3 * 2 - 1
     print('|' + ' ' * x + '*')
 print("* " + "- " * 10 * 3 + '→')
-print('0' + '  ' * 10 * 3 + 'x')
+print('0' + '  ' * 10 * 3 + ' x')
 print()
 
 print('Диаграмма процентного соотношения чисел от -3 до 3 и остальных:')
@@ -36,16 +44,16 @@ with open("sequence.txt") as f:
             kol3 += 1
         else:
             kolost += 1
-proc3 = round(100 * kol3/count)
-procost = round(100 * kolost/count)
+proc3 = round(50 * kol3/count)
+procost = round(50 * kolost/count)
 print('↑ %')
-for i in range(100, 0, -1):
+for i in range(50, 0, -1):
     if (proc3 >= i) and (procost >= i):
-        print('|', '■ ' * 2)
+        print('|', '■■■■■ ' * 2)
     elif (proc3 >= i):
-        print('|', '■')
+        print('|', '■■■■■')
     elif (procost >= i):
-        print('|', ' ', '■')
+        print('|', '     ', '■■■■■')
     else:
         print('|')
-print("* " + "- " * 5 + '→')
+print("* " + "- " * 10 + '→')
